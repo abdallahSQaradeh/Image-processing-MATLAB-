@@ -8,7 +8,7 @@ for i=1:Nr
         hCDF(i,j) = Cellcdf(h,i,j);
     end
 end
-CDF =hCDF;
+CDF =uint8(hCDF);
         
 end
 
