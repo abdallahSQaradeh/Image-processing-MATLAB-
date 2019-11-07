@@ -1,4 +1,4 @@
-function [equalizedimage] = Equlaization(image,round)
+function [equalizedimage] = Equlaization(image,image2,round )
 %UNTITLED11 Summary of this function goes here
 %   Detailed explanation goes here
 [r c]=size(image);
@@ -6,10 +6,10 @@ newimage = zeros(r,c);
         for i=1:r
             for j=1:c
                 temp =  image(i,j);
-                image(i,j) = round(temp,temp);
+               newimage(i,j) = round(image(i,j),image2(i,j));
             end
         end
-       equalizedimage = uint8(image);
+       equalizedimage = uint8(newimage);
                 
 end
 

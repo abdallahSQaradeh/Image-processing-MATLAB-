@@ -8,16 +8,13 @@ h = zeros(256,256);
 
 for i=1:Nr 
     for j=1:Nc
-       % for M=1:Nr
-           % for N=1:Nc
-                tempI = image(i,j);
-                tempB = blur(i,j);
-       
-            h(tempI +1, tempB+1) = h(tempI+1 , tempB+1) + 1;
+          tempI = image(i,j);
+          tempB = blur(i,j);
+          h(tempI +1, tempB+1) = h(tempI+1 , tempB+1) + 1;
         end
-            end
+   end
     
   
-joint = uint8(h);
+joint = h;
 end
 
