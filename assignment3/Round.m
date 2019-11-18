@@ -1,4 +1,4 @@
-function [RoundI] = Round(cdf,pdf,image)
+function [RoundI] = Round(cdf,image)
 %UNTITLED6 Summary of this function goes here
 %   Detailed explanation goes here
 [r c] = size(image);

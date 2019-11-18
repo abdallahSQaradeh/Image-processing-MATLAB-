@@ -6,7 +6,7 @@ newimage = zeros(r,c);
         for i=1:r
             for j=1:c
                 temp =  image(i,j);
-               newimage(i,j) = round(image(i,j),image2(i,j));
+               newimage(i,j) = round(image(i,j)+1,image2(i,j)+1);
             end
         end
        equalizedimage = uint8(newimage);
